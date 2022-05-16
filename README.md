@@ -12,6 +12,8 @@
 * git remote add origin https://github.com/username/git_practice.git
 * git push -u origin master
 
+# Tips for creating really good README-files
+
 * Project Title: the name of your project
 * Description: This is an extremely important component of the README. You should describe the main purpose of your project. Answer questions like “why did you build this project?” and “what problem(s) does it solve?”. It also helps to include your motivations for the project and what you learned from it.
 * Features: If your project has multiple features, list them here. Don’t be afraid to brag if your project has unique features that make it stand out. You can even add screenshots and gifs to show off the features.
