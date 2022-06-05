@@ -1,14 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
     <head>
         <title>Form Tester</title>
         <meta charset="utf-8">
     </head>
     <body>
         <form action="./example.html" method="POST">
-            <h1>Creating a form</h1>
-            <p>Looks like I have no idea on how and what
-                 I sould do to actually get somewhere with this</p>
+            <h1>Plays and characters</h1>
+            <p>A mix of Shakespeare's plays and Bible's texts</p>
+            <!--to add heading for the input, use label and connect the two with for/id-->
+            <label for="sPlay">Choose a play</label>
+            <br>
+            <!--type = look, name = system name and value = default value-->
+            <input type="text" name="sPlay" value="Midsummer Night's Dream" id="sPlay">
+            <br><br>
+            <label for="mixLogic">Mix logic</label>
+            <br>
+            <!--For passwords or hidden input, use the password-input-->
+            <input type="password" name="mixLogic" id="mixLogic">
+            <br><br>
+            <label for="numberForm">Numerical input</label>
+            <br>
+            <input type="number" name="numberForm" id="numberForm">
+            <br><br>
+            <label for="stepForm">Numerical input with controlled step size</label>
+            <br>
+            <input type="number" name="stepForm" id="stepForm" step="5">
+            <br><br>
+            <label for="rangeSlider">Slider with a range and a step</label>
+            <br>
+            <span>Start</span>
+            <input type="range" id="rangeSlider" name="rangeSlider" min="-100" max="100" step="5">
+            <span>Finish</span>
+            <br>
+            <section class="checkboxes">
+                <!--each <input> has the same value for the name attribute. Using the same name 
+                    for each checkbox groups the <input>s together. However, each <input> has a 
+                    unique id to pair with a <label>.-->
+                <input type="checkbox" name="headings" id="heading1">
+                <label for="heading1">Much ado about nothing</label>
+                <br>
+                <input type="checkbox" name="headings" id="heading2">
+                <label for="heading2">Macbeth</label>
+                <br>
+                <input type="checkbox" name="headings" id="heading3">
+                <label for="heading3">Othello</label>
+                <br>
+            </section>
+            <section class="radioButton">
+                <!--Notice from the code snippet, radio buttons 
+                    (like checkboxes) do not display their value. 
+                    We have an associated <label> to represent the 
+                        value of the radio button. To group radio buttons 
+                        together, we assign them the same name and 
+                        only one radio button from that group can 
+                        be selected.-->
+                <h3>Choose your king (wisely):</h3>
+                <input type="radio" name="kings" id="richard">
+                <label for="richard">Richard</label>
+                <br>
+                <input type="radio" name="kings" id="henry">
+                <label for="henry">Henry</label>
+                <br>
+                <input type="radio" name="kings" id="louis">
+                <label for="louis">Louis</label>
+                <br><br>
+            </section>
+            <section class="dropdown">
+                <label for="bibleChar">Who is your favorite Bible character?</label>
+                <select name="bibleChar" id="bibleChar">
+                    <option value="holySpirit">Holy Spirit</option>
+                    <option value="judas">Judas</option>
+                    <option value="rachel">Rachel</option>
+                    <option value="eve">Eve</option>
+                    <option value="mary">Mary Magdalene</option>
+                    <option value="jesus">Jesus Christ</option>
+                    <option value="god">God/Javeh</option>
+                    <option value="snake">Snake/Satan/Lucifer</option>
+                    <option value="peter">Peter</option>
+                    <option value="paul">Paul</option>
+                </select>
+                <br><br>
+            </section>
+            <section class="datalist">
+                <!--Even if we have an organized dropdown list, if the 
+                    list has a lot of options, it could be tedious for 
+                    users to scroll through the entire list to locate 
+                    one option. That’s where using the <datalist> element 
+                    comes in handy. The <datalist> is used with an <input 
+                    type="text"> element. The <input> creates a text 
+                    field that users can type into and filter options 
+                    from the <datalist>.-->
+                <label for="city">Where does the action take place?</label>
+                <input type="text" list="cities" name="city" id="city">
+                <datalist id="cities">
+                    <option value="Copenhagen"></option>
+                    <option value="Glasgow"></option>
+                    <option value="London"></option>
+                    <option value="Rome"></option>
+                    <option value="Vienna"></option>
+                    <option value="Carthage"></option>
+                    <option value="Milan"></option>
+                    <option value="Liverpool"></option>
+                    <option value="Paris"></option>
+                </datalist>
+                <br><br>
+            </section>
+            <section class="textarea">
+                <label for="poem">Poem</label>
+                <br>
+                <textarea name="poem" id="poem" cols="30" rows="10">Write your own damn poem</textarea>
+                <br><br>
+            </section>
+            <section class="submission">
+                <input type="submit" value="Save everything">
+            </section>
         </form>
     </body>
 </html>
