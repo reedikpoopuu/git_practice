@@ -109,11 +109,23 @@
             <section class="textarea">
                 <label for="poem">Poem</label>
                 <br>
-                <textarea name="poem" id="poem" cols="30" rows="10">Write your own damn poem</textarea>
+                <!--You can set min/max length of text to enter for text input-->
+                <textarea name="poem" id="poem" cols="30" rows="10" minlength="10" maxlength="160">Write your own damn poem</textarea>
                 <br><br>
             </section>
             <section class="submission">
                 <input type="submit" value="Save everything">
+            </section>
+            <section class="required">
+                <label for="character">Choose your character</label>
+                <br>
+                <input type="text" name="character" id="character" required>
+            </section>
+            <section class="regex">
+                <label for="payment">Enter your credit card number</label>
+                <br>
+                <!--ask for numbers with length of min 14 and max 16 characters-->
+                <input type="text" name="payment" id="payment" required pattern="[0-9]{14,16}">
             </section>
         </form>
     </body>
